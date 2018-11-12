@@ -25,3 +25,8 @@ A small library that adds commas to numbers
 
 
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
+
+git add .
+git commit -m “Initial release”
+git tag v0.1.0
+git push origin master --tags
