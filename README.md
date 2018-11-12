@@ -33,3 +33,6 @@ git push origin master --tags
 
 https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
 This it a test
+
+[![Build Status](https://travis-ci.org/razorphish/marasco-core-geo.svg?branch=master)](https://travis-ci.org/razorphish/marasco-core-geo)
+[![Coverage Status](https://coveralls.io/repos/github/razorphish/marasco-core-geo/badge.svg)](https://coveralls.io/github/razorphish/marasco-core-geo)
