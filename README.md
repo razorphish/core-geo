@@ -30,3 +30,5 @@ git add .
 git commit -m “Initial release”
 git tag v0.1.0
 git push origin master --tags
+
+https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738

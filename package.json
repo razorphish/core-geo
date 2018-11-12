@@ -4,15 +4,16 @@
   "description": "Geo api ",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "cover": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "author": "Antonio Marasco (Maras,co)",
   "license": "ISC",
-  "engines": {
-    "node": ">=4.2.4"
-  },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0"
   }
 }
