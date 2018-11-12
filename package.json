@@ -1,0 +1,18 @@
+{
+  "name": "marasco-core-geo",
+  "version": "1.0.0",
+  "description": "Geo api ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "author": "Antonio Marasco (Maras,co)",
+  "license": "ISC",
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
