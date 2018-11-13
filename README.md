@@ -41,3 +41,5 @@ update verion numbers
 npm version patch -m "Version %s - add sweet badges"
 git push && git push --tags
 npm publish
+
+npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease [--preid=<prerelease-id>] | from-git]
