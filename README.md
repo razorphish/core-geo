@@ -48,3 +48,6 @@ git push && git push --tags
 npm publish
 
 npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease [--preid=<prerelease-id>] | from-git]
+
+https://travis-ci.org/razorphish/core-geo
+https://coveralls.io/repos
