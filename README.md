@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/razorphish/marasco-core-geo.svg?branch=master)](https://travis-ci.org/razorphish/marasco-core-geo)
-[![Coverage Status](https://coveralls.io/repos/github/razorphish/marasco-core-geo/badge.svg)](https://coveralls.io/github/razorphish/marasco-core-geo)
+[![Build Status](https://travis-ci.org/razorphish/core-geo.svg?branch=master)](https://travis-ci.org/razorphish/core-geo)
+[![Coverage Status](https://coveralls.io/repos/github/razorphish/core-geo/badge.svg)](https://coveralls.io/github/razorphish/core-geo)
 
 Number Formatter
 =========
