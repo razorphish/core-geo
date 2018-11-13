@@ -1,18 +1,18 @@
 [![Build Status](https://travis-ci.org/razorphish/core-geo.svg?branch=master)](https://travis-ci.org/razorphish/core-geo)
 [![Coverage Status](https://coveralls.io/repos/github/razorphish/core-geo/badge.svg)](https://coveralls.io/github/razorphish/core-geo)
 
-Number Formatter
+Geo
 =========
 
-A small library that adds commas to numbers
+A small library that consumes an api to retrieve GEO information from the user
 
 ## Installation
 
-  `npm install @marasco/marasco-core-geo`
+  `npm install @marasco/core-geo`
 
 ## Usage
 
-    var numFormatter = require('@marasco/marasco-core-geo');
+    var numFormatter = require('@marasco/core-geo');
 
     var formattedNum = numFormatter(35666);
   
@@ -24,7 +24,12 @@ A small library that adds commas to numbers
 
   `npm test`
 
+## Coverage
+ 
+  `npm cover`
+
 ## Contributing
+Antonio Marasco
 
 
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
