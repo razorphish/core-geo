@@ -1,58 +1,49 @@
 'use strict';
 
-var expect = require('chai').expect;
-var geo = require('../index');
+const expect = require('chai').expect;
+const nock = require('nock');
+const geo = require('../index');
+const response = require('./response');
 
-describe('#GEO', function () {
-    it('should convert single digits', function () {
-        var result = geo.test(1);
-        expect(result).to.equal('1');
+
+describe('GEO', () => {
+    beforeEach(() => {
+        nock('http://ip-api.com')
+            .get('/json')
+            .reply(200, response)
     });
 
-    it('should convert double digits', function () {
-        var result = geo.test(12);
-        expect(result).to.equal('12');
+    it('should get my geocode', () => {
+        return geo.getGeo()
+            .then(response => {
+                //expect an object back
+                expect(typeof response).to.equal('object');
+
+                //Test result of name, company and location for the response
+                expect(response.status).to.equal('success')
+                expect(response.countryCode).to.equal('US')
+                expect(response.country).to.equal('United States')
+            });
     });
 
-    it('should convert triple digits', function () {
-        var result = geo.test(123);
-        expect(result).to.equal('123');
+    it('should get my geocode by personal geo url', () => {
+        return geo.getGeo({ url: 'http://ip-api.com/json' })
+            .then(response => {
+                //expect an object back
+                expect(typeof response).to.equal('object');
+
+                //Test result of name, company and location for the response
+                expect(response.status).to.equal('success')
+                expect(response.countryCode).to.equal('US')
+                expect(response.country).to.equal('United States')
+            });
     });
 
-    it('should convert 4 digits', function () {
-        var result = geo.test(1234);
-        expect(result).to.equal('1,234');
-    });
-
-    it('should convert 5 digits', function () {
-        var result = geo.test(12345);
-        expect(result).to.equal('12,345');
-    });
-
-    it('should convert 6 digits', function () {
-        var result = geo.test(123456);
-        expect(result).to.equal('123,456');
-    });
-
-    it('should convert 7 digits', function () {
-        var result = geo.test(1234567);
-        expect(result).to.equal('1,234,567');
-    });
-
-    it('should convert 8 digits', function () {
-        var result = geo.test(12345678);
-        expect(result).to.equal('12,345,678');
-    });
-
-    it('should return an object', function(){
-        var result = geo.getGeo((error, response) => {
-            console.log(response);
-            expect(response).to.exist();
-        });
-
-    });
-
-    it('should throw an error', function(){
-        expect(geo.getGeo.bind()).to.throw('Callback is missing or is not a function');
+    it('should get my geocode by personal geo url: invalid url', () => {
+        return geo.getGeo({ url: 'https://ip-api.com/json' })
+            .then(error => {
+                //expecting error
+                expect(typeof response).to.equal('object');
+            });
     });
 });
