@@ -42,9 +42,12 @@ git push origin master --tags
 https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
 This it a test
 
-update verion numbers
+##update verion numbers
+
 npm version patch -m "Version %s - add sweet badges"
+
 git push && git push --tags
+
 npm publish
 
 npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease [--preid=<prerelease-id>] | from-git]
